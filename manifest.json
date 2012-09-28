@@ -1,0 +1,24 @@
+{
+	"name": "Jira Kit",
+	"description": "Useful tweaks for Jira",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"*://site.domain/*"
+	],
+	"content_scripts": [{
+		"matches": ["*://site.domain/*"],
+		"js": ["assets/js/mootools-core-1.4.5.js", "assets/js/custom.js"],
+		"css": ["assets/css/custom.css"]
+    }],
+    "background": {
+    	"scripts": ["assets/js/background.js"]
+    },
+    "icons": {
+		"128": "assets/images/icon_128.jpg",
+		"48": "assets/images/icon_48.jpg",
+		"32": "assets/images/icon_32.jpg"
+	}
+}
